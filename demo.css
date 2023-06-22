@@ -1,0 +1,188 @@
+.toggle {
+    position: fixed;
+    top: -75px;
+    left: -75px;
+    width: 150px;
+    height: 150px;
+    border: none;
+    border-radius: 50%;
+    z-index: 498;
+}
+
+.toggle .toggle-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 150px;
+    border: none;
+    border-radius: 50%;
+    z-index: 500;
+    cursor: pointer;
+    transition: 0.3s linear;
+}
+
+.toggle .toggle-overlay:hover {
+    box-shadow: 0 0 10px;
+}
+
+.toggle .sun,
+.toggle .moon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    z-index: 499;
+}
+
+.toggle .sun {
+    background: radial-gradient(#f9ca24, #f6e58d);
+    box-shadow: 0 0 10px 2px #fbc531;
+    position: absolute;
+    top: 85px;
+    left: 85px;
+}
+
+.toggle .moon {
+    background: #dedede;
+    box-shadow: 0 0 10px 2px #eeeeee;
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    transform: rotate(160deg);
+}
+
+.toggle .moon::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: rgba(32, 32, 64, 0.9);
+}
+
+.toggle.day {
+    animation: rotateDay 0.45s linear 0s 1 forwards;
+}
+
+.toggle.night {
+    animation: rotateNight 0.45s linear 0s 1 forwards;
+}
+
+.toggle.night .toggle-overlay:hover {
+    box-shadow: 0 0 10px #d4d7dd;
+}
+
+body {
+    width: 100%;
+    transition: all 0.35s linear;
+    margin: 0;
+    padding: 0;
+    position: static;
+}
+
+body::before {
+    opacity: 1;
+    background: linear-gradient(to top, #6bc5d2, #cbf1f5 35%);
+}
+
+body::after {
+    opacity: 0;
+    background: linear-gradient(to top, #202060, #0f0f21 35%);
+}
+
+body::before,
+body::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
+
+body.day::after {
+    animation: opacityOff 0.35s linear 0s 1 forwards;
+}
+
+body.night {
+    color: #f7f7f7;
+}
+
+body.night::after {
+    animation: opacityOn 0.35s linear 0s 1 forwards;
+}
+
+@keyframes rotateNight {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(180deg);
+    }
+}
+
+@keyframes rotateDay {
+    0% {
+        transform: rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes opacityOn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes opacityOff {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+h1 {
+    text-align: center;
+}
+
+html {
+    font-family: arial;
+    font-size: 15px;
+    line-height: 1.15;
+    color: #0C0C0C;
+    box-sizing: border-box;
+}
+
+* {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    box-sizing: inherit;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 0.5rem 0 0.7rem 0;
+    color: #F9F9F9;
+    background: #2D303A;
+    z-index: 999;
+}

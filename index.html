@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/53f2502b8b.js" crossorigin="anonymous"></script>
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="toggle">
+        <div class="sun"></div>
+        <div class="moon"></div>
+        <div class="toggle-overlay"></div>
+    </div>
+
+    <header class="container pz py-2">
+        <div class="row  header ">
+            <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                <h2 class="greeting">Good morning</h2>
+
+                </h3>
+            </div>
+            <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 search text-md-end">
+                <label
+                    class="d-flex d-sm-inline-block search-bar px-2 py-2 my-3 border-0 border-bottom border-dark text-light">
+                    <input type="text" placeholder="Enter City Name" class="border-0 bg-transparent" spellcheck="false">
+                    <button class="border-0 search-btn  bg-transparent">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="1.25em" viewBox="0 0 512 512">
+                            <!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+
+                            <path
+                                d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
+                        </svg>
+                    </button>
+
+                </label>
+            </div>
+        </div>
+    </header>
+    <main class="container pz mm">
+        <div class="row">
+            <div class="col-12 col-lg-8 ">
+                <!-- top  -->
+                <!-- top end -->
+                <!-- main start -->
+                <div class="row gy-3 gy-lg-0 weatherbody">
+                    <!-- weather & air quality start -->
+                    <div class="col-12 col-md-8 col-lg-7">
+                        <div class="card wr border-0 rounded-4 weathercard bg-transparent">
+                            <div class="card-header border-0 d-flex gap-3 bg-transparent px-0">
+                                <div>
+                                    <h2 class="city">Weather</h2>
+                                    <h3 class="fw-light small weather-desc text-uppercase">What's the weather</h3>
+                                </div>
+                            </div>
+                            <div class="card-body px-0">
+                                <div class="">
+                                    <div>
+                                        <h1 class="card-title temp">22˚C</h1>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <div>
+                                                    <p class="feels-like small">Feels like 20˚C</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row details ">
+                                    <div class="col-4  text-start">
+
+                                        <div class="py-2">
+                                            <p class="border-end border-dark small">
+                                                <span>Humidity</span> <span class="humidity ">800mb</small>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <!-- <div class="border border-2 rounded-4 py-2 gr">
+                                            <h6 class="fw-light small">Visibility</h6>
+                                            <small class="visibility">800mb</small>
+                                        </div> -->
+                                        <div class="py-2">
+                                            <p class="border-end border-dark small">
+                                                <span class="">Visibility</span> <span class="visibility">800mb</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <!-- <div class="border border-2 rounded-4 py-2">
+                                            <h6 class="fw-light small">Humidity</h6>
+                                            <small class="humidity">800mb</small>
+                                        </div> -->
+
+                                        <div class="py-2">
+                                            <!-- <p class="border-end border-dark">
+                                                    <span class="h6 fw-light small">Pressure</span> <small
+                                                        class="pressure fw-light">800mb</small>
+                                                </p> -->
+                                            <p class="small">
+                                                <span class="">Pressure</span> <span class="pressure">800mb</span>
+                                            </p>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-12 col-md-4 col-lg-5 ">
+                        <div class=" card border-0  rounded-4 weathercard bg-transparent">
+                            <!-- <div class="card-header border-0 bg-transparent px-0">
+                                <h5>Suntime</h5>
+                                <h6 class=" fw-light small">Good</h6>
+                            </div> -->
+                            <div class="card-body px-0">
+                                <div class="sunmoon">
+                                    <div class="sun-times">
+                                        <div class="sun-path">
+                                            <div class="sun-animation"></div>
+                                        </div>
+                                        <div class="sun-symbol-path"><span class="symbol">☀</span></div>
+                                    </div>
+                                    <div class="legend">
+                                        <div class="sunrise">05:30 AM</div>
+                                        <div class="sunset">8:04 PM</div>
+                                    </div>
+                                    <div class="clear">&nbsp;</div>
+                                </div>
+                                <!-- <div class="d-flex">
+                                    <div>
+                                        <h1 class="card-title air-quality"></h1>
+                                        <p class="wind"></p>
+                                    </div>
+                                    <div class="border rounded-2 h-25  mt-2 air-back">
+                                        <span class="small px-1">AQI</span>
+                                    </div>
+                                </div> -->
+                                <!-- <div class="d-flex">
+                                    <div class="w-100">
+                                        <div class="custom-rangeslider">
+                                            <input class="custom-rangeInput" title="Percentage" id="range-slider"
+                                                type="range" min="1" max="5" value="1" step="1" data-tooltip="true"
+                                                aria-controls="rangeTooltip rangeLabel" aria-live="polite" disabled>
+                                            <span class="custom-rangeslider__tooltip small fw-light">Good</span>
+                                            <span class="custom-rangeslider__label">
+                                                <span class="custom-rangeslider__label-min">Good</span>
+                                                <span class="custom-rangeslider__label-max">Hazardous</span>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- weather & air quality end -->
+                <div class=" row weatherbottom ">
+                    <div class="py-5">
+                        <div class="col-12">
+                            <div class="row mb-3">
+                                <div class="col-12 col-sm-8">
+                                    <h2>How's the temperature today?</h2>
+                                </div>
+                                <div class="col-12 col-sm-4 d-flex gap-1 justify-sm-content-end">
+                                    <ul class="nav nav-pills nav-fill" id="pills-tab" role="tablist">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" id="pills-home-tab" data-toggle="pill"
+                                                href="#pills-1" role="tab"><svg xmlns="http://www.w3.org/2000/svg"
+                                                    width="16" height="16" fill="currentColor"
+                                                    class="bi bi-thermometer-sun" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M5 12.5a1.5 1.5 0 1 1-2-1.415V2.5a.5.5 0 0 1 1 0v8.585A1.5 1.5 0 0 1 5 12.5z" />
+                                                    <path
+                                                        d="M1 2.5a2.5 2.5 0 0 1 5 0v7.55a3.5 3.5 0 1 1-5 0V2.5zM3.5 1A1.5 1.5 0 0 0 2 2.5v7.987l-.167.15a2.5 2.5 0 1 0 3.333 0L5 10.486V2.5A1.5 1.5 0 0 0 3.5 1zm5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0v-1a.5.5 0 0 1 .5-.5zm4.243 1.757a.5.5 0 0 1 0 .707l-.707.708a.5.5 0 1 1-.708-.708l.708-.707a.5.5 0 0 1 .707 0zM8 5.5a.5.5 0 0 1 .5-.5 3 3 0 1 1 0 6 .5.5 0 0 1 0-1 2 2 0 0 0 0-4 .5.5 0 0 1-.5-.5zM12.5 8a.5.5 0 0 1 .5-.5h1a.5.5 0 1 1 0 1h-1a.5.5 0 0 1-.5-.5zm-1.172 2.828a.5.5 0 0 1 .708 0l.707.708a.5.5 0 0 1-.707.707l-.708-.707a.5.5 0 0 1 0-.708zM8.5 12a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0v-1a.5.5 0 0 1 .5-.5z" />
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class=" nav-link" id="pills-profile-tab" data-toggle="pill"
+                                                href="#pills-2" role="tab">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    fill="currentColor" class="bi bi-umbrella" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M8 0a.5.5 0 0 1 .5.5v.514C12.625 1.238 16 4.22 16 8c0 0 0 .5-.5.5-.149 0-.352-.145-.352-.145l-.004-.004-.025-.023a3.484 3.484 0 0 0-.555-.394A3.166 3.166 0 0 0 13 7.5c-.638 0-1.178.213-1.564.434a3.484 3.484 0 0 0-.555.394l-.025.023-.003.003s-.204.146-.353.146-.352-.145-.352-.145l-.004-.004-.025-.023a3.484 3.484 0 0 0-.555-.394 3.3 3.3 0 0 0-1.064-.39V13.5H8h.5v.039l-.005.083a2.958 2.958 0 0 1-.298 1.102 2.257 2.257 0 0 1-.763.88C7.06 15.851 6.587 16 6 16s-1.061-.148-1.434-.396a2.255 2.255 0 0 1-.763-.88 2.958 2.958 0 0 1-.302-1.185v-.025l-.001-.009v-.003s0-.002.5-.002h-.5V13a.5.5 0 0 1 1 0v.506l.003.044a1.958 1.958 0 0 0 .195.726c.095.191.23.367.423.495.19.127.466.229.879.229s.689-.102.879-.229c.193-.128.328-.304.424-.495a1.958 1.958 0 0 0 .197-.77V7.544a3.3 3.3 0 0 0-1.064.39 3.482 3.482 0 0 0-.58.417l-.004.004S5.65 8.5 5.5 8.5c-.149 0-.352-.145-.352-.145l-.004-.004a3.482 3.482 0 0 0-.58-.417A3.166 3.166 0 0 0 3 7.5c-.638 0-1.177.213-1.564.434a3.482 3.482 0 0 0-.58.417l-.004.004S.65 8.5.5 8.5C0 8.5 0 8 0 8c0-3.78 3.375-6.762 7.5-6.986V.5A.5.5 0 0 1 8 0zM6.577 2.123c-2.833.5-4.99 2.458-5.474 4.854A4.124 4.124 0 0 1 3 6.5c.806 0 1.48.25 1.962.511a9.706 9.706 0 0 1 .344-2.358c.242-.868.64-1.765 1.271-2.53zm-.615 4.93A4.16 4.16 0 0 1 8 6.5a4.16 4.16 0 0 1 2.038.553 8.688 8.688 0 0 0-.307-2.13C9.434 3.858 8.898 2.83 8 2.117c-.898.712-1.434 1.74-1.731 2.804a8.687 8.687 0 0 0-.307 2.131zm3.46-4.93c.631.765 1.03 1.662 1.272 2.53.233.833.328 1.66.344 2.358A4.14 4.14 0 0 1 13 6.5c.77 0 1.42.23 1.897.477-.484-2.396-2.641-4.355-5.474-4.854z" />
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" id="pills-contact-tab" data-toggle="pill"
+                                                href="#pills-3" role="tab"> <i class="fa-solid fa-wind"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="tab-content" id="pills-tabContent">
+                                <div class="tab-pane fade show active" id="pills-1" role="tabpanel"
+                                    aria-labelledby="pills-home-tab">
+                                    <div class="row gy-3 text-center d-flex ">
+                                        <div class="col-4 col-sm-3 col-lg-2">
+                                            <div class="card bg-info-subtle">
+                                                <div class="hourImage">
+                                                    <img src="/images/clear.png" style="width: 50%;"
+                                                        class="weather-icon-zero" alt="">
+                                                </div>
+                                                <div class="card-body">
+                                                    <h2 class="temp-zero">22˚C</h2>
+                                                    <span class="time-span-zero">Morning</span>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="col-4 col-sm-3 col-lg-2">
+                                            <div class="card">
+                                                <div><img src="/images/clear.png" style="width: 50%;"
+                                                        class="weather-icon-one" alt=""></div>
+                                                <div class="card-body">
+                                                    <h2 class="temp-one">22˚C</h2>
+                                                    <span class="time-span-one">Afternoon</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 col-sm-3 col-lg-2">
+                                            <div class="card">
+                                                <div><img src="/images/clear.png" style="width: 50%;"
+                                                        class="weather-icon-two" alt=""></div>
+                                                <div class="card-body">
+                                                    <h2 class="temp-two">22˚C</h2>
+                                                    <span class="time-span-two">Evening</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 col-sm-3 col-lg-2">
+                                            <div class="card">
+                                                <div><img src="/images/clear.png" style="width: 50%;"
+                                                        class="weather-icon-three" alt=""></div>
+                                                <div class="card-body">
+                                                    <h2 class="temp-three">22˚C</h2>
+                                                    <span class="time-span-three">Night</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 col-sm-3 col-lg-2">
+                                            <div class="card">
+                                                <div><img src="/images/clear.png" style="width: 50%;"
+                                                        class="weather-icon-four" alt=""></div>
+                                                <div class="card-body">
+                                                    <h2 class="temp-four">22˚C</h2>
+                                                    <span class="time-span-four">Night</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 col-sm-3 col-lg-2">
+                                            <div class="card">
+                                                <div><img src="/images/clear.png" style="width: 50%;"
+                                                        class="weather-icon-five" alt=""></div>
+                                                <div class="card-body">
+                                                    <h2 class="temp-five">22˚C</h2>
+                                                    <span class="time-span-five">Night</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="pills-2" role="tabpanel"
+                                    aria-labelledby="pills-profile-tab">
+                                    <div class="row gy-3 text-center d-flex">
+                                        <div class="col-4 col-sm-3 col-lg-2">
+                                            <div class="card bg-secondary">
+                                                <div class="hourImage">
+                                                    <img src="/images/clear.png" style="width: 50%;"
+                                                        class="rain-icon-zero" alt="">
+                                                </div>
+                                                <div class="card-body">
+                                                    <h2 class="precipitation-zero">22˚C</h2>
+                                                    <span class="time-span-zero">Morning</span>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="col-4 col-sm-3 col-lg-2">
+                                            <div class="card">
+                                                <div><img src="/images/clear.png" style="width: 50%;"
+                                                        class="rain-icon-one" alt=""></div>
+                                                <div class="card-body">
+                                                    <h2 class="precipitation-one">22˚C</h2>
+                                                    <span class="time-span-one">Afternoon</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 col-sm-3 col-lg-2">
+                                            <div class="card">
+                                                <div><img src="/images/clear.png" style="width: 50%;"
+                                                        class="rain-icon-two" alt=""></div>
+                                                <div class="card-body">
+                                                    <h2 class="precipitation-two">22˚C</h2>
+                                                    <span class="time-span-two">Evening</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 col-sm-3 col-lg-2">
+                                            <div class="card">
+                                                <div><img src="/images/clear.png" style="width: 50%;"
+                                                        class="rain-icon-three" alt=""></div>
+                                                <div class="card-body">
+                                                    <h2 class="precipitation-three">22˚C</h2>
+                                                    <span class="time-span-three">Night</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 col-sm-3 col-lg-2">
+                                            <div class="card">
+                                                <div><img src="/images/clear.png" style="width: 50%;"
+                                                        class="rain-icon-four" alt=""></div>
+                                                <div class="card-body">
+                                                    <h2 class="precipitation-four">22˚C</h2>
+                                                    <span class="time-span-four">Night</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 col-sm-3 col-lg-2">
+                                            <div class="card">
+                                                <div><img src="/images/clear.png" style="width: 50%;"
+                                                        class="rain-icon-five" alt=""></div>
+                                                <div class="card-body">
+                                                    <h2 class="precipitation-five">22˚C</h2>
+                                                    <span class="time-span-five">Night</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="pills-3" role="tabpanel"
+                                    aria-labelledby="pills-contact-tab">
+                                    <div class="row gy-3 text-center d-flex">
+                                        <div class="col-4 col-sm-3 col-lg-2">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h6 class="wind-zero">22˚C</h6>
+                                                    <span class="wind-deg-zero"></span><br>
+                                                    <span class="time-span-zero">Morning</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 col-sm-3 col-lg-2">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h6 class="wind-one">22˚C</h6>
+                                                    <span class="wind-deg-one"></span><br>
+                                                    <span class="time-span-one">Afternoon</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 col-sm-3 col-lg-2">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h6 class="wind-two">22˚C</h6>
+                                                    <span class="wind-deg-two"></span><br>
+                                                    <span class="time-span-two">Evening</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 col-sm-3 col-lg-2">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h6 class="wind-three">22˚C</h6>
+                                                    <span class="wind-deg-three"></span><br>
+                                                    <span class="time-span-three">Night</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 col-sm-3 col-lg-2">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h6 class="wind-four">22˚C</h6>
+                                                    <span class="wind-deg-four"></span><br>
+                                                    <span class="time-span-four">Night</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 col-sm-3 col-lg-2">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h6 class="wind-five">22˚C</h6>
+                                                    <span class="wind-deg-five"></span><br>
+                                                    <span class="time-span-five">Night</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- main end -->
+            <div class="col-12 col-lg-4 ">
+                <div class="">
+                    <div class="row border-bottom py-0 mt-3">
+                        <div class="col-8">
+                            <h4><span class="h5 day">Sunday</span><br><span class="">Kathmandu, Nepal</span>
+                            </h4>
+                        </div>
+                        <div class="col-4">
+                            <h1 class="bkt-temp text-end">22˚C</h1>
+                        </div>
+                    </div>
+                    <div class=" card border-0  rounded-4 weathercard bg-transparent">
+                        <div class="card-header border-0 bg-transparent px-0">
+                            <h5>Air Quality</h5>
+                            <h6 class="air-rating fw-light small">Good</h6>
+                        </div>
+                        <div class="card-body px-0">
+                            <div class="d-flex">
+                                <div>
+                                    <h1 class="card-title air-quality"></h1>
+                                    <p class="wind"></p>
+                                </div>
+                                <div class="border rounded-2 h-25  mt-2 air-back">
+                                    <span class="small px-1">AQI</span>
+                                </div>
+                            </div>
+                            <!-- <div class="d-flex">
+                                <div class="w-100">
+                                    <div class="custom-rangeslider">
+                                        <input class="custom-rangeInput" title="Percentage" id="range-slider"
+                                            type="range" min="1" max="5" value="1" step="1" data-tooltip="true"
+                                            aria-controls="rangeTooltip rangeLabel" aria-live="polite" disabled>
+                                        <span class="custom-rangeslider__tooltip small fw-light">Good</span>
+                                        <span class="custom-rangeslider__label">
+                                            <span class="custom-rangeslider__label-min">Good</span>
+                                            <span class="custom-rangeslider__label-max">Hazardous</span>
+                                        </span>
+                                    </div>
+                                </div>
+
+                            </div> -->
+                        </div>
+                    </div>
+                    <div class="py-3">
+                        <div class="card tm-we mt-2 mt-sm-5 h-100">
+                            <div class="card-header border-bottom-0">
+                                Tommorow
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title"><span class="cityName"></span></h5>
+                                <h2 class="card-text tommorow-temp"></h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+
+    <script src="https://kit.fontawesome.com/1b59bc20c8.js"></script>
+
+    <script type="module" src="main.js"></script>
+
+
+</body>
+
+</html>
